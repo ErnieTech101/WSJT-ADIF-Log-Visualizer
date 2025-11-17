@@ -2,7 +2,8 @@
 
 A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your contacts on an interactive map, monitor your log in real-time, and track progress toward major awards.
 
-![WSJT-X Log Mapper](screenshot.png)
+<img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
+
 
 ## Features
 
