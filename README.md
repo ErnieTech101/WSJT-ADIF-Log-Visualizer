@@ -14,12 +14,14 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 - **Contact Path Visualization**: Show animated paths to your last 5 contacts
 - **Multiple Map Styles**: Choose from OpenStreetMap, CartoDB Positron, or CartoDB Voyager
 
+<img width="1880" height="931" alt="Screenshot 2025-11-17 184654" src="https://github.com/user-attachments/assets/0b378d54-d141-44a5-9027-361525d03017" />
 ### Log Management
 - **Comprehensive Log Viewer**: Browse and filter your entire log
 - **Advanced Filtering**: Filter by callsign, band, mode, and date range
 - **CSV Export**: Export filtered logs to CSV format
 - **QRZ.com Integration**: Upload your log directly to QRZ.com (requires API key)
 
+<img width="1881" height="928" alt="Screenshot 2025-11-17 184804" src="https://github.com/user-attachments/assets/c02527c2-8824-4d0a-b775-ee5068919d93" />
 ### Analytics & Awards
 - **WAC Progress**: Track Worked All Continents (6 continents)
 - **WAZ Progress**: Track Worked All Zones (40 CQ zones)
@@ -28,15 +30,15 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 - **Statistics Dashboard**: View total QSOs, FT8/FT4 counts, unique grids, max distance, and more
 
 ## Requirements
-
+**Built and Tested in Win11
 - Modern web browser (Chrome, Firefox, Edge, Safari)
 - Local web server (Python's built-in server works great)
-- WSJT-X logging in ADIF format
+- WSJT-X logging in ADIF format - Default is wsjtx_log.adi
 - Optional: QRZ.com API key for log uploads
 
 ## Installation
 
-### 1. Download Files
+### 1. Download Files from this Github repository
 
 Clone or download this repository:
 ```bash
