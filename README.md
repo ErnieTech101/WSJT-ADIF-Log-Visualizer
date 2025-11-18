@@ -1,7 +1,6 @@
 # WSJT-X ADIF Log Visualizer & Mapper
 
-A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your QSOs on an interactive map, monitor your log in real-time and upload to QRZ.com. Track progress toward WAC, WAZ and WPX awards.
-
+## A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your QSOs on an interactive map, monitor your log in real-time and upload to QRZ.com. Track progress toward WAC, WAZ and WPX awards.
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
 ### The Core Functionality
@@ -27,7 +26,7 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 - **Statistics Dashboard**: View total QSOs, FT8/FT4 counts, unique grids, max distance, and more
 
 ### Requirements
-##Built and Tested in Window 11. If you're using MacOS or Linux, it may not work as expected...or it might
+Built and Tested in Window 11. If you're using MacOS or Linux, it may not work as expected...or it might
 - Your browser must allow Javascript to run. There are no ads, trackers, cookies, etc. Chrome, Firefox, Edge, Safari work fine
 - You'll use Python's built-in server, so be sure to install Python 3.x.x
 - WSJT-X's wsjtx_log.adi ADIF log file is used by default. You can choose another as you desire.
