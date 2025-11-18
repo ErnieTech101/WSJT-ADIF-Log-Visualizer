@@ -26,8 +26,8 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 - **Visual Charts**: See your activity by continent, CQ zone, country, and band
 - **Statistics Dashboard**: View total QSOs, FT8/FT4 counts, unique grids, max distance, and more
 
-## Requirements
-**Built and Tested in Window 11. If you're using MacOS or Linux, it may not work as expected...or it might
+### Requirements
+##Built and Tested in Window 11. If you're using MacOS or Linux, it may not work as expected...or it might
 - Your browser must allow Javascript to run. There are no ads, trackers, cookies, etc. Chrome, Firefox, Edge, Safari work fine
 - You'll use Python's built-in server, so be sure to install Python 3.x.x
 - WSJT-X's wsjtx_log.adi ADIF log file is used by default. You can choose another as you desire.
