@@ -52,20 +52,27 @@ Ensure you have these files in your directory:
 
 ### 3. Create Configuration File
 
-Create a `config.json` file with your station details:
-
+Edit the downloaded `config.json` file with your station details: 
+- <yourcall> is your call in the clear without the the "< >"
+- latitude in the form 00.0000
+- longitude in the form 00.000 or -00.0000 if you are west of the Prime Meridian
+- <yourgrid> is your 6-character maidenhead grid ID in the clear without the the "< >"
+- apiKey is your QRZ.com logbook API key. It is 16 digits and must be in " " (Don't forget the - characters!)
+- uploadInterval is how often you want the wsjtx_log.adi or selected .adi file to be rescanned for new QSOs. 3 seconds is default
+Everything else is self-explanatory
 ```json
 {
-  "callsign": "K3DFD",
+  "callsign": "<yourcall>",
   "qth": {
-    "latitude": 40.0785,
-    "longitude": -75.0745,
-    "grid": "FN20lb"
+    "latitude": 00.0000,
+    "longitude": -00.0000,
+    "grid": "<yourgrid>"
   },
   "logFile": "wsjtx_log.adi",
-  "refreshInterval": 5000,
+  "refreshInterval": 3000,
+  "defaultMapStyle": "dark",
   "display": {
-    "title": "WSJT-X ADIF Log Visualizer",
+    "title": "WSJT-X ADIF Log Mapper-Visualizer",
     "callsignFontSize": "24pt",
     "titleFontSize": "18pt"
   },
@@ -73,7 +80,7 @@ Create a `config.json` file with your station details:
     "realtimeMonitoring": true
   },
   "qrz": {
-    "apiKey": "",
+    "apiKey": "0000-0000-0000-0000",
     "autoUpload": false,
     "uploadInterval": 300000
   }
