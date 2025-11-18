@@ -53,13 +53,7 @@ Ensure you have these files in your directory:
 ### 3. Create Configuration File
 
 Edit the downloaded `config.json` file with your station details: 
-- yourcall is your callsign"
-- latitude in the form '00.0000'
-- longitude in the form '00.000' or '-00.0000' if you are west of the Prime Meridian
-- yourgrid is your 6-character maidenhead grid ID
-- apiKey is your QRZ.com logbook API key. It is 16 digits and don't forget the - characters
-- uploadInterval is how often you want the wsjtx_log.adi or selected .adi file to be rescanned for new QSOs. 3 seconds is default
-- Everything else is self-explanatory
+
 ```json
 {
   "callsign": "yourcall",
@@ -87,18 +81,18 @@ Edit the downloaded `config.json` file with your station details:
 }
 ```
 
-**Configuration Options:**
+**config.json values:**
 
-| Option | Description | Default |
+| Option | Description | Example |
 |--------|-------------|---------|
-| `callsign` | Your callsign | "K3DFD" |
-| `qth.latitude` | Your station latitude | 40.0785 |
-| `qth.longitude` | Your station longitude | -75.0745 |
-| `qth.grid` | Your Maidenhead grid square | "FN20lb" |
+| `callsign` | Your callsign | "K3ABC" |
+| `qth.latitude` | Your station latitude | 40.01235 |
+| `qth.longitude` | Your station longitude | -72.01235 |
+| `qth.grid` | Your Maidenhead grid square | "FN20qn" |
 | `logFile` | ADIF log filename | "wsjtx_log.adi" |
-| `refreshInterval` | Real-time refresh interval (ms) | 5000 |
+| `refreshInterval` | Real-time refresh interval (ms) | 3000 |
 | `autoStart.realtimeMonitoring` | Start monitoring on load | true |
-| `qrz.apiKey` | Your QRZ.com API key | "" |
+| `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
 ### 4. Set Up Your Log File
 
