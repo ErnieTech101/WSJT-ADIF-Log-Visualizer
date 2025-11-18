@@ -4,23 +4,21 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
-## Main Features
-
 ### The Core Functionality
 - **Interactive Map Visualization**: Plot all your QSO on a maidenhead grid map with color-coded markers by band
 - **Real-time Log Monitoring**: Automatically reload and update the map as you make new contacts.
 - **Maidenhead Grid Overlay**: Toggle a grid overlay to visualize grid squares
 - **Contact Path Visualization**: Show animated paths to your last 5 contacts
 - **Multiple Map Styles**: Choose from OpenStreetMap default, CartoDB Positron, or CartoDB Voyager
-
 <img width="1880" height="931" alt="Screenshot 2025-11-17 184654" src="https://github.com/user-attachments/assets/0b378d54-d141-44a5-9027-361525d03017" />
+
 ### ADIF Log Management
 - **Comprehensive Log Viewer**: Browse and filter your entire log
 - **Advanced Filtering**: Filter by callsign, band, mode, and date range
 - **CSV Export**: Export filtered logs to CSV format
 - **QRZ.com Integration**: Upload your log directly to QRZ.com (requires API key)
-
 <img width="1881" height="928" alt="Screenshot 2025-11-17 184804" src="https://github.com/user-attachments/assets/c02527c2-8824-4d0a-b775-ee5068919d93" />
+
 ### View Analytics & Progress toward WAC, WAZ and WPX Awards
 - **WAC Progress**: Track Worked All Continents (6 continents)
 - **WAZ Progress**: Track Worked All Zones (40 CQ zones)
