@@ -49,8 +49,9 @@ Ensure you have these files in your directory:
 - `config.json` - Your configuration file
 - `cty.json` - Country/DXCC entity database
 - `wsjtx_log.adi` - Your WSJT-X log file (or configured name)
+- `start_servers.py` - Starts 2 Python minimal http servers on ports 8000 (web page server) and 8001 (CORS proxy for QRZ.com)
 
-### 3. Create Configuration File
+### 3. Edit config.json Configuration File
 
 Edit the downloaded `config.json` file with your station details: 
 
