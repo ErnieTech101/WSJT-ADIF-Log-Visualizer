@@ -32,32 +32,32 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 - WSJT-X's wsjtx_log.adi ADIF log file is used by default. You can choose another as you desire.
 - Optional: QRZ.com API key is required for log uploads
 
+
+## How does this work?
+
+WSJT-X ADIF Log Visualizer & Mapper is a web app. It is HTML and CSS with a bunch of JavaScript. All open source
+and relatively easy to understand. The web app is served to your browser via a simple Python web server. All you do is open
+a Windows CMD prompt as Administrator, run one simple Python script then point your browser to http://localhost:8000
+
 ## Installation
 
-### 1. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC
+You can run WSJT-X ADIF Log Visualizer & Mapper either directly from WSJT-X's user directory - recommended - OR in a separate 
+directory of your choice. For instance, C:\wsjtx-webserver.
 
-Clone or download this repository:
-```bash
-git clone https://github.com/yourusername/wsjtx-log-mapper.git
-```
-Or go to the repository and download the wsjtx_adif_visualizer.zip directly. You can run WSJT-X ADIF Log Visualizer & Mapper
-either directly from WSJT-X's user directory - recommended - OR in a separate directory of your choice. For instance, C:\webserver.
+## 1. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC
 
 - Option 1: Download and un-zip into the WSJT-X local user directory: C:\Users\<your_user_name>\AppData\Local\WSJT-X. The advantage 
-is that the wsjtx_log.adi file is contained in the directory with the rest of the WSJT-X user files including wsjtx_log.adi.
+is that all the files are contained in the directory with required wsjtx_log.adi log file. Nice and tidy.
 
-- Option 2: Download and un-zip into a separate director under C:\. For instance, C:\wsjtx-webserver. This keeps all the files
+- Option 2: Download and un-zip into a separate directory under C:\ For instance, C:\wsjtx-webserver. This keeps all the files
 separate from the user's WSJT-X files but requires a symlink to C:\Users\<your_user_name>\AppData\Local\WSJT-X\wsjtx_log.adi
-be create in that separate directory. 
+be created in that separate directory so the wsjtx_log.adi file can be found. To do that, open a CMD window as Administrator, CD to
+the desired directory where you un-zipped the download and issue the command:
 
-Open a CMD window as Administrator, CD to the desired directory where you un-zipped the download and issue the command
-mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
+               mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
 
-### 2. Required Files
+### 2. Un-Zip the wsjtx-log-mapper.zip to where you want to run it from and ensure you have these files in your directory:
 
-### 2. Y
-
-Ensure you have these files in your directory:
 - `index.html` - Main application
 - `config.json` - Your configuration file
 - `cty.json` - Country/DXCC entity database
