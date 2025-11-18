@@ -1,18 +1,18 @@
-# WSJT-X ADIF Log Mapper
+# WSJT-X ADIF Log Visualizer & Mapper
 
-A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your contacts on an interactive map, monitor your log in real-time, and track progress toward major awards.
+A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your QSOs on an interactive map, monitor your log in real-time and upload to QRZ.com. Tack progress toward WAC, WAZ and WPX awards.
 
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
 
-## Features
+## Maini Features
 
 ### Core Functionality
-- **Interactive Map Visualization**: Plot all your contacts on a world map with color-coded markers by band
-- **Real-time Log Monitoring**: Automatically reload and update the map as you make new contacts
+- **Interactive Map Visualization**: Plot all your QSO on a maidenhead grid map with color-coded markers by band
+- **Real-time Log Monitoring**: Automatically reload and update the map as you make new contacts.
 - **Maidenhead Grid Overlay**: Toggle a grid overlay to visualize grid squares
 - **Contact Path Visualization**: Show animated paths to your last 5 contacts
-- **Multiple Map Styles**: Choose from OpenStreetMap, CartoDB Positron, or CartoDB Voyager
+- **Multiple Map Styles**: Choose from OpenStreetMap default, CartoDB Positron, or CartoDB Voyager
 
 <img width="1880" height="931" alt="Screenshot 2025-11-17 184654" src="https://github.com/user-attachments/assets/0b378d54-d141-44a5-9027-361525d03017" />
 ### Log Management
@@ -30,11 +30,11 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 - **Statistics Dashboard**: View total QSOs, FT8/FT4 counts, unique grids, max distance, and more
 
 ## Requirements
-**Built and Tested in Win11
-- Modern web browser (Chrome, Firefox, Edge, Safari)
-- Local web server (Python's built-in server works great)
-- WSJT-X logging in ADIF format - Default is wsjtx_log.adi
-- Optional: QRZ.com API key for log uploads
+**Built and Tested in Window 11. If you're using MacOS or Linux, it may not work as expected...or it might
+- Your browser must allow Javascript to run. There are no ads, trackers, cookies, etc. Chrome, Firefox, Edge, Safari work fine
+- You'll use Python's built-in server, so be sure to install Python 3.x.x
+- WSJT-X's wsjtx_log.adi ADIF log file is used by default. You can choose another as you desire.
+- Optional: QRZ.com API key is required for log uploads
 
 ## Installation
 
@@ -43,8 +43,8 @@ A web-based visual logger and analytics tool for amateur radio operators using W
 Clone or download this repository:
 ```bash
 git clone https://github.com/yourusername/wsjtx-log-mapper.git
-cd wsjtx-log-mapper
 ```
+Or go to the repository and download the wsjtx_adif_visualizer.zip file to your PC
 
 ### 2. Required Files
 
