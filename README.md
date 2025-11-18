@@ -33,16 +33,18 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 - Optional: QRZ.com API key is required for log uploads
 
 
-## How does this work?
+## So How does this all work?
 
 WSJT-X ADIF Log Visualizer & Mapper is a web app. It is HTML and CSS with a bunch of JavaScript. All open source
 and relatively easy to understand. The web app is served to your browser via a simple Python web server. All you do is open
 a Windows CMD prompt as Administrator, run one simple Python script then point your browser to http://localhost:8000
 
-## Installation
+# Installation
 
 You can run WSJT-X ADIF Log Visualizer & Mapper either directly from WSJT-X's user directory - recommended - OR in a separate 
 directory of your choice. For instance, C:\wsjtx-webserver.
+
+## 1. Install Python 3.x first if you haven't done so already. You can download from https://www.python.org/downloads/windows/
 
 ## 1. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC
 
@@ -108,7 +110,6 @@ Edit the downloaded `config.json` file with your station details:
 | `autoStart.realtimeMonitoring` | Start monitoring on load | true |
 | `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
-### 4. 
 
 ### 4. Copy ALL the files from the downloaded .zip to C:\Users\<your_user_name>\AppData\Local\WSJT-X
 * Note that if you can't find this directory, the AppData folder may be hidden.
@@ -127,9 +128,12 @@ ln -s ~/.local/share/WSJT-X/wsjtx_log.adi .
 
 Or configure WSJT-X to log directly to this directory.
 
-### 5. Start the Web Server
+### 4. Install Python
 
-The application requires a local web server due to CORS restrictions.
+### 6. Start the Python Web Server.
+
+The application uses a very minimal and simple local Python web server that the webpage on poet 8000 and on port 8001 that due 
+handles the CORS restrictions that happens when uploading your log .adi file to QRZ.com. This all happens in the background.
 
 **Python 3:**
 ```bash
