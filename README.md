@@ -34,15 +34,28 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 
 ## Installation
 
-### 1. Download Files from this Github repository
+### 1. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC
 
 Clone or download this repository:
 ```bash
 git clone https://github.com/yourusername/wsjtx-log-mapper.git
 ```
-Or go to the repository and download the wsjtx_adif_visualizer.zip file to your PC
+Or go to the repository and download the wsjtx_adif_visualizer.zip directly. You can run WSJT-X ADIF Log Visualizer & Mapper
+either directly from WSJT-X's user directory - recommended - OR in a separate directory of your choice. For instance, C:\webserver.
+
+- Option 1: Download and un-zip into the WSJT-X local user directory: C:\Users\<your_user_name>\AppData\Local\WSJT-X. The advantage 
+is that the wsjtx_log.adi file is contained in the directory with the rest of the WSJT-X user files including wsjtx_log.adi.
+
+- Option 2: Download and un-zip into a separate director under C:\. For instance, C:\wsjtx-webserver. This keeps all the files
+separate from the user's WSJT-X files but requires a symlink to C:\Users\<your_user_name>\AppData\Local\WSJT-X\wsjtx_log.adi
+be create in that separate directory. 
+
+Open a CMD window as Administrator, CD to the desired directory where you un-zipped the download and issue the command
+mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
 
 ### 2. Required Files
+
+### 2. Y
 
 Ensure you have these files in your directory:
 - `index.html` - Main application
@@ -95,7 +108,9 @@ Edit the downloaded `config.json` file with your station details:
 | `autoStart.realtimeMonitoring` | Start monitoring on load | true |
 | `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
-### 4. Copy ALL the files from the .zip to c:\users\<your_user_name>\AppData\local\WSJT-X
+### 4. 
+
+### 4. Copy ALL the files from the downloaded .zip to C:\Users\<your_user_name>\AppData\Local\WSJT-X
 * Note that if you can't find this directory, the AppData folder may be hidden.
 
 Copy or symlink your WSJT-X log file to the application directory:
