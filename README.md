@@ -86,7 +86,7 @@ Edit the downloaded `config.json` file with your station details:
 
 | Option | Description | Example |
 |--------|-------------|---------|
-| `callsign` | Your callsign | "K3ABC" |
+| `callsign` | Your callsign | "W3ZAZ" |
 | `qth.latitude` | Your station latitude | 40.01235 |
 | `qth.longitude` | Your station longitude | -72.01235 |
 | `qth.grid` | Your Maidenhead grid square | "FN20qn" |
@@ -95,7 +95,8 @@ Edit the downloaded `config.json` file with your station details:
 | `autoStart.realtimeMonitoring` | Start monitoring on load | true |
 | `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
-### 4. Set Up Your Log File
+### 4. Copy ALL the files from the .zip to c:\users\<your_user_name>\AppData\local\WSJT-X
+* Note that if you can't find this directory, the AppData folder may be hidden.
 
 Copy or symlink your WSJT-X log file to the application directory:
 
