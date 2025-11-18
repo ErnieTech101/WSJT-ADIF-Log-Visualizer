@@ -59,7 +59,7 @@ Edit the downloaded `config.json` file with your station details:
 - yourgrid is your 6-character maidenhead grid ID
 - apiKey is your QRZ.com logbook API key. It is 16 digits and don't forget the - characters
 - uploadInterval is how often you want the wsjtx_log.adi or selected .adi file to be rescanned for new QSOs. 3 seconds is default
-Everything else is self-explanatory
+### Everything else is self-explanatory
 ```json
 {
   "callsign": "yourcall",
