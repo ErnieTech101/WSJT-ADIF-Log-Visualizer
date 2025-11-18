@@ -53,16 +53,16 @@ Ensure you have these files in your directory:
 ### 3. Create Configuration File
 
 Edit the downloaded `config.json` file with your station details: 
-- <yourcall> is your call in the clear without the the "< >"
-- latitude in the form 00.0000
-- longitude in the form 00.000 or -00.0000 if you are west of the Prime Meridian
-- <yourgrid> is your 6-character maidenhead grid ID in the clear without the the "< >"
-- apiKey is your QRZ.com logbook API key. It is 16 digits and must be in " " (Don't forget the - characters!)
+- yourcall is your callsign"
+- latitude in the form '00.0000'
+- longitude in the form '00.000' or '-00.0000' if you are west of the Prime Meridian
+- yourgrid is your 6-character maidenhead grid ID
+- apiKey is your QRZ.com logbook API key. It is 16 digits and don't forget the - characters
 - uploadInterval is how often you want the wsjtx_log.adi or selected .adi file to be rescanned for new QSOs. 3 seconds is default
 Everything else is self-explanatory
 ```json
 {
-  "callsign": "<yourcall>",
+  "callsign": "yourcall",
   "qth": {
     "latitude": 00.0000,
     "longitude": -00.0000,
