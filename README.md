@@ -57,13 +57,13 @@ your choice. For instance, C:\wsjtx-webserver.
 
 ## 1. Install Python 3.x first if you haven't done so already. You can download from 
 
-                                      'https://www.python.org/downloads/windows/'
+                                        https://www.python.org/downloads/windows/
 
 ## 1A. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC:
 
 - Option 1 (Recommended): Download and un-zip wsjtx-log-mapper.zip into the WSJT-X local user directory: 
                                      
-                                     'C:\Users\<your_user_name>\AppData\Local\WSJT-X'
+                                      C:\Users\<your_user_name>\AppData\Local\WSJT-X
                                      
 The advantage here is that all the files are contained in the same directory with required wsjtx_log.adi log file. Nice and tidy.
 Putting these files in your local user WSJT-X directory has no impact on the operation of WSJT-X.
@@ -74,7 +74,7 @@ files separate from your WSJT-X files but requires a symlink to C:\Users\<your_u
 be created in that separate directory so the wsjtx_log.adi file can be found. To do that, open a CMD window as Administrator, CD 
 to the desired directory where you un-zipped the download and issue the command:
 
-               'mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"'
+                    mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
 
 ### 2. Un-Zip the wsjtx-log-mapper.zip to where you want to run it from and ensure you have these files in your directory:
 
@@ -86,7 +86,8 @@ to the desired directory where you un-zipped the download and issue the command:
 
 ### 3. Edit config.json Configuration File with Notepad (Notepad++ is better!)
 
-Edit the downloaded `config.json` file with your station details: 
+Edit the downloaded `config.json` file with your station details: Dont't forget to put in your QRZ.com logbook API key! If
+you don't have one, the app will QRZ Upload button will turn grey and will not function.
 
 ```json
 {
@@ -138,93 +139,18 @@ which is the reason why the little Python http.server runs another instance on p
 
 Open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
 
-                                        'python start_servers.py'
+                                          python start_servers.py
 
 ### 6. Open a browser window or tab and navigate to: 
 
-                                          `http://localhost:8000`
+                                          http://localhost:8000
 
 If all goes as expected (it's really quite simple) you should see the main page
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
-## QRZ.com Upload Setup
 
-To enable QRZ.com log uploads, you need to set up a CORS proxy.
 
-### 1. Get Your QRZ API Key
-
-1. Log in to QRZ.com
-2. Go to Settings → Logbook
-3. Find your API key
-
-### 2. Set Up CORS Proxy
-
-Create `qrz_proxy.py`:
-
-```python
-#!/usr/bin/env python3
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import urllib.request
-import urllib.parse
-
-class CORSRequestHandler(BaseHTTPRequestHandler):
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
-        self.end_headers()
-
-    def do_POST(self):
-        content_length = int(self.headers['Content-Length'])
-        post_data = self.rfile.read(content_length)
-        
-        req = urllib.request.Request(
-            'https://logbook.qrz.com/api',
-            data=post_data,
-            headers={'Content-Type': self.headers['Content-Type']}
-        )
-        
-        try:
-            response = urllib.request.urlopen(req)
-            result = response.read()
-            
-            self.send_response(200)
-            self.send_header('Access-Control-Allow-Origin', '*')
-            self.send_header('Content-Type', 'text/plain')
-            self.end_headers()
-            self.wfile.write(result)
-        except Exception as e:
-            self.send_response(500)
-            self.end_headers()
-            self.wfile.write(str(e).encode())
-
-if __name__ == '__main__':
-    server = HTTPServer(('localhost', 8001), CORSRequestHandler)
-    print('QRZ CORS proxy running on port 8001...')
-    server.serve_forever()
-```
-
-### 3. Run the Proxy
-
-```bash
-python3 qrz_proxy.py
-```
-
-### 4. Add API Key to Config
-
-Update your `config.json`:
-```json
-{
-  "qrz": {
-    "apiKey": "your-qrz-api-key-here",
-    "autoUpload": false,
-    "uploadInterval": 300000
-  }
-}
-```
-
-## Usage
+# How to Use WSJT-X ADIF Log Visualizer & Mapper (it's almost self-explanatory!)
 
 ### Real-time Monitoring
 
