@@ -34,7 +34,7 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 
 # So How does this all work?
 
-### WSJT-X ADIF Log Visualizer & Mapper is a browser app. It is single HTML (index.html) with a bunch of JavaScript in it. All open 
+WSJT-X ADIF Log Visualizer & Mapper is a browser app. It is single HTML (index.html) with a bunch of JavaScript in it. All open 
 source and easy to understand. The web app is served to your browser via a simple Python web server. All you do is open a 
 Windows CMD prompt as Administrator, run one simple Python script then point your browser to http://localhost:8000.
 
@@ -82,6 +82,7 @@ to the desired directory where you un-zipped the download and issue the command:
 - `cty.json` - Country/DXCC entity database
 - `wsjtx_log.adi` - Your WSJT-X log file (or configured name)
 - `start_servers.py` - Starts 2 Python minimal http servers on ports 8000 (web page server) and 8001 (CORS proxy for QRZ.com)
+- `favicon.ico` - The webpage's little icon
 
 ### 3. Edit config.json Configuration File with Notepad (Notepad++ is better!)
 
@@ -130,13 +131,8 @@ you don't have one, the app will QRZ Upload button will turn grey and will not f
 
 ### 4. Start the Python Web Server.
 
-The application uses a very minimal and simple local Python web server that serves the webpage on port 8000 and on port 8001 that 
-handles the CORS restrictions error when uploading your log .adi file to QRZ.com. This all happens in the background. BTW,
-CORS (Cross-Origin Resource Sharing) restrictions are security measures that prevent web pages from making requests to a 
-different domain than the one that served the web page. QRZ.com won't respond to API calls unless that restriction is satisfield
-which is the reason why the little Python http.server runs another instance on port 8001, which handles the CORS issue.
-
-Open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
+The application uses a very minimal and simple local Python web server that serves the WSJT-ADIF-Log-Visualizera webpage on port 8000
+Simply open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
 
                                           python start_servers.py
 
@@ -144,25 +140,26 @@ Open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-
 
                                           http://localhost:8000
 
-If all goes as expected (it's really quite simple) you should see the main page
+If all goes as expected (it's really quite simple) you should see the main page -
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
 
-
-# How to Use WSJT-X ADIF Log Visualizer & Mapper (it's almost self-explanatory!)
+# How to Use WSJT-X ADIF Log Visualizer & Mapper 
+(it's almost self-explanatory!)
 
 ### Real-time Monitoring
 
 1. Check "Real-time Log Monitoring" checkbox
 2. The map updates automatically as you log contacts
-3. Refresh interval is shown (default: 5.0s)
+3. Refresh interval is shown (default: 3.0s)
 4. Status shows "● LIVE - Monitoring..."
+5. The .adi file refresh time is set in the 'config.json' file
 
 ### Manual Upload
 
 1. Click "Upload & Plot" button
 2. Select your ADIF file
-3. Map plots all contacts immediately
+3. The Map updates and cd c:\usersplots all contacts immediately
 
 ### Viewing Your Log
 
