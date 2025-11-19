@@ -179,13 +179,13 @@ If all goes as expected (it's really quite simple) you should see the main page 
 - Choose from 3 map styles - CartoDB Positron (Light) is pretty minimal!
 - Enable/disable Maidenhead grid overlay - You may need to toggle the checkbox
 - Show/hide last 5 contact paths - You may need to to toggle the checkbox
+<img width="1871" height="969" alt="image" src="https://github.com/user-attachments/assets/18e8ad0c-6777-4c88-948f-744c013a7132" />
 
 **Interacting with Markers:**
 - **Hover**: See grid square and latest contact
 - **Click**: View scrollable detailed contact list for that grid. Click on a callsign to see bring up QRZ page in a new tab
 - **Color**: Indicates primary band used
 <img width="1874" height="972" alt="image" src="https://github.com/user-attachments/assets/a568168a-cba3-47d5-8c4e-17fbc32fb7d3" />
-
 
 ### Analytics
 
