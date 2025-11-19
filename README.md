@@ -1,6 +1,6 @@
 # WSJT-X ADIF Log Visualizer & Mapper
 
-## A web-based visual logger and analytics tool for amateur radio operators using WSJT-X. Plot your QSOs on an interactive map, monitor your log in real-time and upload to QRZ.com. Track progress toward WAC, WAZ and WPX awards.
+## A browser-based visual WSJT-X log visualizer, mapper and analytics tool for amateur radio operators. See your QSOs on an interactive map, monitor your log in real-time and upload to QRZ.com (with API). Track progress toward WAC, WAZ and WPX awards.
 <img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
 ### The Core Functionality
