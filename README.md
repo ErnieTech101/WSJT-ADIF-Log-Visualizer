@@ -223,22 +223,15 @@ If all goes as expected (it's really quite simple) you should see the main page 
 
 ## Band Color Coding
 
-| Band | Color |
-|------|-------|
-| 160m | Dark Red |
-| 80m | Orange Red |
-| 60m | Dark Orange |
-| 40m | Gold |
-| 30m | Yellow Green |
-| 20m | Green |
-| 17m | Cyan |
-| 15m | Dark Blue |
-| 12m | Blue Violet |
-| 10m | Deep Pink |
-| 6m | Light Pink |
-| 2m | Plum |
-| 70cm | Orchid |
-| 23cm | Purple |
+| Band | Color | Band | Color |
+|------|-------|------|-------|
+| 160m | Dark Red | 80m | Orange Red |
+| 60m | Dark Orange | 40m | Gold |
+| 30m | Yellow Green | 20m | Green |
+| 17m | Cyan | 15m | Dark Blue |
+| 12m | Blue Violet | 10m | Deep Pink |
+| 6m | Light Pink | 2m | Plum |
+| 70cm | Orchid | 23cm | Purple |
 
 # Troubleshooting
 
@@ -246,6 +239,7 @@ If all goes as expected (it's really quite simple) you should see the main page 
 - Ensure web server is running - it starts when you run `python start_servers.py`
 - Check browser console for errors (F12) - Maybe you're blocking OpenStreetMap?
 - Verify `config.json` is valid JSON. Be careful when you edit this file!
+- Clear out your browser's cache (F5) and reload the page
 
 ### Real-time Monitoring Not Working
 - Verify log file path in `config.json` - Normally the wsjtx_log.adi is in the same directory
