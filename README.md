@@ -11,8 +11,8 @@
 - **Multiple Map Styles**: Choose from OpenStreetMap default, CartoDB Positron, or CartoDB Voyager
 <img width="1880" height="931" alt="Screenshot 2025-11-17 184654" src="https://github.com/user-attachments/assets/0b378d54-d141-44a5-9027-361525d03017" />
 
-### ADIF Log Management
-- **Comprehensive Log Viewer**: Browse and filter your entire log
+### ADIF Log Map Visualization
+- **Comprehensive Log Viewer**: Browse and filter your entire WSJT-X log
 - **Advanced Filtering**: Filter by callsign, band, mode, and date range
 - **CSV Export**: Export filtered logs to CSV format
 - **QRZ.com Integration**: Upload your log directly to QRZ.com (requires API key)
@@ -35,9 +35,13 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 
 ## So How does this all work?
 
-WSJT-X ADIF Log Visualizer & Mapper is a web app. It is HTML and CSS with a bunch of JavaScript. All open source
-and relatively easy to understand. The web app is served to your browser via a simple Python web server. All you do is open
-a Windows CMD prompt as Administrator, run one simple Python script then point your browser to http://localhost:8000
+WSJT-X ADIF Log Visualizer & Mapper is a browser app. It is HTML and CSS with a bunch of JavaScript. All open source and easy to
+understand. The web app is served to your browser via a simple Python web server. All you do is open a Windows CMD prompt as 
+Administrator, run one simple Python script then point your browser to http://localhost:8000.
+
+Note that this app is designed to work locally on a Windows 11 (or 10) PC. It reads local WSJT-X log files. It will work as a
+web-based app on a remote server but the real-time monitoring feature will be disabled. The best workaround for this is to 
+manually upload your wsjtx_log.adi file to the root of your remote web server.
 
 # Installation
 
@@ -46,15 +50,16 @@ directory of your choice. For instance, C:\wsjtx-webserver.
 
 ## 1. Install Python 3.x first if you haven't done so already. You can download from https://www.python.org/downloads/windows/
 
-## 1. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC
+## 1A. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC.
 
-- Option 1: Download and un-zip into the WSJT-X local user directory: C:\Users\<your_user_name>\AppData\Local\WSJT-X. The advantage 
-is that all the files are contained in the directory with required wsjtx_log.adi log file. Nice and tidy.
+- Option 1 (Recommended): Download and un-zip into the WSJT-X local user directory: C:\Users\<your_user_name>\AppData\Local\WSJT-X. 
+The advantage is that all the files are contained in the same directory with required wsjtx_log.adi log file. Nice and tidy.
+* Note that if you can't find this directory, the AppData folder may be hidden.
 
-- Option 2: Download and un-zip into a separate directory under C:\ For instance, C:\wsjtx-webserver. This keeps all the files
-separate from the user's WSJT-X files but requires a symlink to C:\Users\<your_user_name>\AppData\Local\WSJT-X\wsjtx_log.adi
-be created in that separate directory so the wsjtx_log.adi file can be found. To do that, open a CMD window as Administrator, CD to
-the desired directory where you un-zipped the download and issue the command:
+- Option 2: Download and un-zip into a separate directory such as C:\wsjtx-webserver. This keeps all the files separate from
+your WSJT-X files but requires a symlink to C:\Users\<your_user_name>\AppData\Local\WSJT-X\wsjtx_log.adi be created in that
+separate directory so the wsjtx_log.adi file can be found. To do that, open a CMD window as Administrator, CD to the desired
+directory where you un-zipped the download and issue the command:
 
                mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
 
@@ -111,48 +116,25 @@ Edit the downloaded `config.json` file with your station details:
 | `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
 
-### 4. Copy ALL the files from the downloaded .zip to C:\Users\<your_user_name>\AppData\Local\WSJT-X
-* Note that if you can't find this directory, the AppData folder may be hidden.
-
-Copy or symlink your WSJT-X log file to the application directory:
-
-**Windows:**
-```cmd
-copy "%LOCALAPPDATA%\WSJT-X\wsjtx_log.adi" .
-```
-
-**Linux/Mac:**
-```bash
-ln -s ~/.local/share/WSJT-X/wsjtx_log.adi .
-```
-
-Or configure WSJT-X to log directly to this directory.
-
 ### 4. Install Python
 
-### 6. Start the Python Web Server.
+### 5. Start the Python Web Server.
 
-The application uses a very minimal and simple local Python web server that the webpage on poet 8000 and on port 8001 that due 
-handles the CORS restrictions that happens when uploading your log .adi file to QRZ.com. This all happens in the background.
+The application uses a very minimal and simple local Python web server that serves the webpage on port 8000 and on port 8001 that 
+handles the CORS restrictions error when uploading your log .adi file to QRZ.com. This all happens in the background. BTW,
+CORS (Cross-Origin Resource Sharing) restrictions are security measures that prevent web pages from making requests to a 
+different domain than the one that served the web page. QRZ.com won't respond to API calls unless that restriction is satisfield
+which is the reason why the little Python http.server runs another instance on port 8001, which handles the CORS issue.
 
-**Python 3:**
-```bash
-python -m http.server 8000
-```
 
-**Python 2:**
-```bash
-python -m SimpleHTTPServer 8000
-```
+**Python 3: (from wherever you un-zipped the downloaded files)**
 
-**Node.js:**
-```bash
-npx http-server -p 8000
-```
+Open a CMD windows as Admininstrator and issue the command:  python start_servers.py
 
-### 6. Open in Browser
+### 6. Open a browser window or tab and navigate to: `http://localhost:8000`
 
-Navigate to: `http://localhost:8000`
+If all goes as expected (it's really quite simple) you should see the main page
+<img width="1912" height="964" alt="Screenshot 2025-11-17 184517" src="https://github.com/user-attachments/assets/00315547-8db6-463e-bb88-9f94440f8061" />
 
 ## QRZ.com Upload Setup
 
