@@ -143,8 +143,12 @@ you don't have one, the app will QRZ Upload button will turn grey and will not f
 
 ### 1. Start the Python Web Server.
 
-The application uses a very minimal and simple local Python web server that serves the WSJT-ADIF-Log-Visualizer webpage on port 8000
-Simply open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
+The application uses a very minimal and simple local Python web server that serves the WSJT-ADIF-Log-Visualizer webpage on port 8000 and
+the CORS proxy for QRZ.com on port 8001. Again, they stay out of your way and give some debugging feedback in the open CMD window. Most
+of which you can safely ignore. If a serious exception occurs (I haven't seen one yet) it will exit and you can close that window and
+start it up again.
+
+Open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
 
                                           python start_servers.py
 
