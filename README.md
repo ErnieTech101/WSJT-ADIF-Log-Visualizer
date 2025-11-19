@@ -165,7 +165,7 @@ If all goes as expected (it's really quite simple) you should see the main page 
 
 1. Click "View Log" button
 2. Use filters to search:
-   - **Callsign**: Search for specific stations
+   - **Callsign**: Search for specific stations - Click on a callsign to see bring up QRZ page in a new tab
    - **Band**: Filter by band
    - **Mode**: Filter by mode (FT8, FT4, or whatever WSJT-X mode you used)
    - **Date Range**: Filter by date
@@ -182,7 +182,7 @@ If all goes as expected (it's really quite simple) you should see the main page 
 
 **Interacting with Markers:**
 - **Hover**: See grid square and latest contact
-- **Click**: View scrollable detailed contact list for that grid. Click on a callsign to see bring up QRZ page in another tab
+- **Click**: View scrollable detailed contact list for that grid. Click on a callsign to see bring up QRZ page in a new tab
 - **Color**: Indicates primary band used
 <img width="1874" height="972" alt="image" src="https://github.com/user-attachments/assets/a568168a-cba3-47d5-8c4e-17fbc32fb7d3" />
 
@@ -194,11 +194,14 @@ If all goes as expected (it's really quite simple) you should see the main page 
    - **WAC**: Continents worked (6 total)
    - **WAZ**: CQ Zones worked (40 total)
    - **WPX**: Unique prefixes worked
+<img width="1826" height="353" alt="image" src="https://github.com/user-attachments/assets/38e0c6a7-78ed-4f01-8e15-ad7a8d1756fd" />
+
 3. Explore charts:
    - Contacts by continent
    - Contacts by CQ zone
    - Top 10 countries
    - Band distribution
+<img width="1802" height="789" alt="image" src="https://github.com/user-attachments/assets/0785e41a-d44f-4bfe-896d-4920575ede1a" />
 
 ### QRZ.com Upload
 
