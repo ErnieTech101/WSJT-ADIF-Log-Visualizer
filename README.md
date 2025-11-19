@@ -167,23 +167,25 @@ If all goes as expected (it's really quite simple) you should see the main page 
 2. Use filters to search:
    - **Callsign**: Search for specific stations
    - **Band**: Filter by band
-   - **Mode**: Filter by mode (FT8, FT4, etc.)
+   - **Mode**: Filter by mode (FT8, FT4, or whatever WSJT-X mode you used)
    - **Date Range**: Filter by date
 3. Click "Export CSV" to download filtered data
-4. Click column headers to sort (if JavaScript sorting added)
+<img width="1838" height="935" alt="image" src="https://github.com/user-attachments/assets/b20b1f23-cbf3-4adc-a2cb-90ea79da4463" />
 
 ### Map Features
 
 **Map Styles:**
-- Toggle the "🗺️ Map Features" panel
-- Choose from 3 map styles
-- Enable/disable Maidenhead grid overlay
-- Show/hide last 5 contact paths
+- Expand the "🗺️ Map Features" panel (If it is minimized)
+- Choose from 3 map styles - CartoDB Positron (Light) is pretty minimal!
+- Enable/disable Maidenhead grid overlay - You may need to toggle the checkbox
+- Show/hide last 5 contact paths - You may need to to toggle the checkbox
 
 **Interacting with Markers:**
 - **Hover**: See grid square and latest contact
-- **Click**: View detailed contact list for that grid
+- **Click**: View scrollable detailed contact list for that grid. Click on a callsign to see bring up QRZ page in another tab
 - **Color**: Indicates primary band used
+<img width="1874" height="972" alt="image" src="https://github.com/user-attachments/assets/a568168a-cba3-47d5-8c4e-17fbc32fb7d3" />
+
 
 ### Analytics
 
