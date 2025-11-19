@@ -222,10 +222,10 @@ If all goes as expected (it's really quite simple) you should see the main page 
 | 30m | Yellow Green |
 | 20m | Green |
 | 17m | Cyan |
-| 15m | Royal Blue |
+| 15m | Dark Blue |
 | 12m | Blue Violet |
 | 10m | Deep Pink |
-| 6m | Hot Pink |
+| 6m | Light Pink |
 | 2m | Plum |
 | 70cm | Orchid |
 | 23cm | Purple |
