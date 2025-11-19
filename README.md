@@ -68,7 +68,7 @@ your choice. For instance, C:\wsjtx-webserver.
 
                                         https://www.python.org/downloads/windows/
 
-## 1A. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC:
+## 2. Download the wsjtx-log-mapper.zip file from this Github repository directly to your PC:
 
 - Option 1 (Recommended): Download and un-zip wsjtx-log-mapper.zip into the WSJT-X local user directory: 
                                      
@@ -85,7 +85,7 @@ to the desired directory where you un-zipped the download and issue the command:
 
                     mklink "C:\Users\AppData\Local\WSJT-X\wsjtx_log.adi" "C:\wsjtx-webserver\wsjtx_log.adi"
 
-### 2. Un-Zip the wsjtx-log-mapper.zip to where you want to run it from and ensure you have these files in your directory:
+### 3. Un-Zip the wsjtx-log-mapper.zip to where you want to run it from and ensure you have these files in your directory:
 
 - `index.html` - Main application
 - `config.json` - Your configuration file
@@ -94,7 +94,7 @@ to the desired directory where you un-zipped the download and issue the command:
 - `start_servers.py` - Starts 2 Python minimal http servers on ports 8000 (web page server) and 8001 (CORS proxy for QRZ.com)
 - `favicon.ico` - The webpage's little icon
 
-### 3. Edit config.json Configuration File with Notepad (Notepad++ is better!)
+### 4. Edit config.json Configuration File with Notepad (Notepad++ is better!)
 
 Edit the downloaded `config.json` file with your station details: Dont't forget to put in your QRZ.com logbook API key! If
 you don't have one, the app will QRZ Upload button will turn grey and will not function.
@@ -139,14 +139,18 @@ you don't have one, the app will QRZ Upload button will turn grey and will not f
 | `autoStart.realtimeMonitoring` | Start monitoring on load | true |
 | `qrz.apiKey` | Your QRZ.com API key | "0000-0000-0000-0000" |
 
-### 4. Start the Python Web Server.
+# Getting WSJT-ADIF-Log-Visualizer Up and Running 
 
-The application uses a very minimal and simple local Python web server that serves the WSJT-ADIF-Log-Visualizera webpage on port 8000
+### 1. Start the Python Web Server.
+
+The application uses a very minimal and simple local Python web server that serves the WSJT-ADIF-Log-Visualizer webpage on port 8000
 Simply open a CMD windows as Admininstrator, navigate to where you un-zipped wsjtx-log-mapper.zip and issue the command:  
 
                                           python start_servers.py
 
-### 6. Open a browser window or tab and navigate to: 
+<img width="626" height="358" alt="image" src="https://github.com/user-attachments/assets/0619fc69-866c-4dc1-a3eb-90ea4ccd8aa6" />
+
+### 2. Open a browser window or tab and navigate to: 
 
                                           http://localhost:8000
 
