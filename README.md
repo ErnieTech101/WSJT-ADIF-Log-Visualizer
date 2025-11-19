@@ -49,7 +49,7 @@ continued access to WSJT-X ADIF Log Visualizer & Mapper instance...so remember t
 
 # Simple and Easy Installation
 
-## QUICK INSTALL: Install Python 3.x.x. Download and un-zip the wsjtx-log-mapper.zip release file to WSJT-X's 
+QUICK INSTALL: Install Python 3.x.x. Download and un-zip the wsjtx-log-mapper.zip release file to WSJT-X's 
 C:\Users\...\AppData\Local\WSJT-X directory, edit the config.json file with Notepad with your CALL, LAT-LON and QRZ.com API key,
 open a CMD window with Admininstrator issue the command python start_servers.py and then navigate your browerser to
 localhost:8000 to enjoy using the WSJT-X ADIF Log Visualizer & Mapper.
