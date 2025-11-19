@@ -32,10 +32,9 @@ Built and Tested in Window 11. If you're using MacOS or Linux, it may not work a
 - WSJT-X's wsjtx_log.adi ADIF log file is used by default. You can choose another as you desire.
 - Optional: QRZ.com API key is required for log uploads
 
+# So How does this all work?
 
-## So How does this all work?
-
-WSJT-X ADIF Log Visualizer & Mapper is a browser app. It is single HTML (index.html) with a bunch of JavaScript in it. All open 
+### WSJT-X ADIF Log Visualizer & Mapper is a browser app. It is single HTML (index.html) with a bunch of JavaScript in it. All open 
 source and easy to understand. The web app is served to your browser via a simple Python web server. All you do is open a 
 Windows CMD prompt as Administrator, run one simple Python script then point your browser to http://localhost:8000.
 
