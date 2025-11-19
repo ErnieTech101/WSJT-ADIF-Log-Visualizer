@@ -205,10 +205,11 @@ If all goes as expected (it's really quite simple) you should see the main page 
 
 ### QRZ.com Upload
 
-1. Ensure QRZ API key is configured
-2. Ensure CORS proxy is running
-3. Click "Upload to QRZ" button
+1. Ensure QRZ API key is configured in `config.json`
+2. Ensure CORS proxy is running - it starts automatically when you run `python start_server.py`
+3. Click "Upload to QRZ" button - an error message usually indicates that dupes were found and not added. Just a warning.
 4. View upload history and status
+<img width="1872" height="967" alt="image" src="https://github.com/user-attachments/assets/0e260693-6476-4371-9086-052457e52e54" />
 
 ## Band Color Coding
 
@@ -229,17 +230,17 @@ If all goes as expected (it's really quite simple) you should see the main page 
 | 70cm | Orchid |
 | 23cm | Purple |
 
-## Troubleshooting
+# Troubleshooting
 
 ### Map Doesn't Load
-- Ensure web server is running
-- Check browser console for errors (F12)
-- Verify `config.json` is valid JSON
+- Ensure web server is running - it starts when you run `python start_servers.py`
+- Check browser console for errors (F12) - Maybe you're blocking OpenStreetMap?
+- Verify `config.json` is valid JSON. Be careful when you edit this file!
 
 ### Real-time Monitoring Not Working
-- Verify log file path in `config.json`
-- Check that log file is readable
-- Ensure WSJT-X is writing to the correct file
+- Verify log file path in `config.json` - Normally the wsjtx_log.adi is in the same directory
+- Check that log file is readable - normally it is
+- Ensure WSJT-X is writing to the correct file - Especially if you customized your WSJT-X instance
 
 ### No Contacts Showing
 - Verify ADIF file contains valid grid squares
@@ -247,32 +248,35 @@ If all goes as expected (it's really quite simple) you should see the main page 
 - WSJT-X must be logging grid squares
 
 ### QRZ Upload Fails
-- Verify API key is correct
-- Ensure CORS proxy is running on port 8001
-- Check QRZ.com status
+- Verify YOUR API key is correct
+- Ensure CORS proxy is running on port 8001 - It normally starts when you run `python start_servers.py'
+- Check QRZ.com status - Do you have an active account? You need an API
 
 ### Country Lookups Not Working
-- Ensure `cty.json` exists
-- Check browser console for loading errors
-- Re-download CTY.dat if needed
+- Ensure `cty.json` exists - this comes with the download files.
+- Check browser console for loading errors - Try Firefox, Chrome, Opera or Edge
+- Re-download CTY.dat if needed from the WSJT-X Sourceforge website
 
-## Technical Details
+# Technical Details
+This was a tricky project. Lot's of ins, outs and what-have-yous (to quote Jeff Lebowski). I would be less than forthcoming if I
+didn't mention that I turned to Anthropic's Claude.ai Sonnet 4.5 for assistance. Getting things to work with the CORS issue and 
+coding efficiently are important and Claude can be a lifesaver. Don't be ashamed to vibe coding.
 
 ### Dependencies
 
 **JavaScript Libraries (CDN):**
-- Leaflet 1.9.4 - Interactive maps
-- Chart.js 3.9.1 - Analytics charts
+- Leaflet 1.9.4 - Interactive maps - That is how we get the maps and themes from OpenStreetMap. 
+- Chart.js 3.9.1 - Analytics charts - Looks nice don't they!
 
 **Data Files:**
-- `cty.json` - DXCC entity database (converted from CTY.dat)
+- `cty.json` - DXCC entity database (converted from CTY.dat with a Python script)
 
 ### Browser Storage
 
-This application does **not** use localStorage or sessionStorage. All data is:
+This application does **not** use localStorage, sessionStorage, cookies or any intrusive nonsense. All data is:
 - Loaded from ADIF file
-- Kept in memory during session
-- Re-loaded on page refresh
+- Kept in memory during session and then released
+- Re-loaded on page refresh.
 
 ### ADIF Parsing
 
@@ -291,14 +295,14 @@ The application parses these ADIF fields:
 
 Maidenhead grid squares are converted to lat/lon:
 - 4-character grids: center of square
-- 6-character grids: center of subsquare
-- Accuracy sufficient for mapping
+- 6-character grids: center of subsquare. But we don't see the label because of room
+- Accuracy sufficient for mapping a big old dot in the middle of a grid
 
 ## Contributing
 
 Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
+1. Fork the repository - Have fun.
+2. Create a feature branch - Improve it!
 3. Submit a pull request
 
 ## License
@@ -310,26 +314,25 @@ This project is released under the MIT License.
 - **CTY.dat**: Country lookup data from Jim Reisert AD1C
 - **Leaflet**: Open-source mapping library
 - **Chart.js**: Charting library
-- **OpenStreetMap**: Map tile provider
+- **OpenStreetMap**: Map tile provider - And you DON't need an API account. Just don't abuse it
 - **CartoDB**: Additional map styles
 
 ## Support
 
 For issues or questions:
-- Open an issue on GitHub
-- Contact: [Your Contact Info]
+- Open an issue on here on my GitHub page
 
 ## Changelog
 
-### Version 1.0.0 (2024)
+### Version 1.0.0 (2025) - probably the only version
 - Initial release
 - Real-time monitoring
 - Interactive mapping
 - Log viewer with filtering
-- QRZ.com upload
-- Award tracking (WAC, WAZ, WPX)
-- Analytics dashboard
+- QRZ.com upload - with CORS resolved!
+- Award tracking (WAC, WAZ, WPX) - Can't figue out how to do more than that
+- Analytics dashboard. For statistics nerds like me
 
 ---
 
-**73 and Enjoy WSJT-X! 📻**
+**73 and Enjoy - ErnieTech**
